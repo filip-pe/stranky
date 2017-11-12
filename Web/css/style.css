@@ -1,0 +1,35 @@
+
+* {
+/*	outline: 3px solid black; */
+}
+
+body, html {
+	margin:0;
+}
+
+body{
+	width: 600px;
+	padding: 50px;
+}
+
+
+h1 {
+	font-size: 40px;
+	font-family: 'Lucida';
+	color: lightcoral;
+}
+
+h2 {
+	font-family: 'Lucida Grande';
+	font-size: 24px;
+	color: #8abfff;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted grey
+}
+
+p {
+	color: dimgray;
+	font-size: 16px;
+	font-family: 'Open sans';
+	line-height: 26px;
+}

@@ -1,0 +1,210 @@
+=====================
+klavesove skratky
+=====================
+
+CTRL + ALT + SHIFT + B			format html v notepad ++
+
+
+
+=====================
+tagy
+=====================
+
+======
+HTML
+======
+<hr> 			horizontal rule / vodorvna ciara
+<b>				tucne, alebo <strong>
+<i>				sikme, alebo <em>
+<br>			novy riadok. V CSS sa da odrbat pomocou 'display: block'
+<blockquote>	citat
+<ul>			unordered list - prvky su <li>
+<ol>			ordered list - prvky su <li>
+<dl>			definition list -  - prvky su <dt> a <dd>
+<a href="">		odkaz. http:// , tel:1234, mailto:abc@mail.sk, subor.html (podstranka), #id_sekcie_stranky. 
+				v novom okne: target="_blank"
+<img>			<img src="" height="" width=" alt="">
+<div>			skatulka pre BLOCK elementy
+<span>			skatulka pre INLINE elementy
+
+<header>		! nemoze byt sirsi ako body ;) Stranka moze mat header, ale aj article moze mat vlastny.
+<article>
+<footer>		
+<article> 
+<aside>			postranny obsah, napr. bocne casti textu, citaty, obrazky.. Ale nemusi byt na kraji, podstata je ze ma menej dolezity obsah.
+<section>		vsetky pomozu logicky oddelit obsah v ramci <body>
+<nav>			hlavna navigacia, iba 1 na stranke. Moze obsahovat napr. zoznam (ul, ol)
+<q>				quotation, citat
+
+&nbsp			non breaking space  = medzera. Mozeme ich dat viac, nebudu zredukovane na jednu, ako bezne medzery v html
+&copy			prida symbol copyright
+
+
+<form>			napr: <form action="nejaka url" method="GET alebo POST">
+<input>			napr. <input type="text" name="nazov_bez_diakritiky" value="defaultna hodnota">
+				- placeholder - sedym, ako ukazka hodnoty ktoru mozno vpisat.
+				- input type moze byt napr. name, email, password, date (vykresli kalendar), submit (tlacitko), checkbox, file, radio
+				- required - bude povinne pole
+<textarea>		vacsie oknicko na input textu.
+<select>		ma v sebe <option>
+<button>		na rozdiel od <input> typu submit, sa da stylovat.
+<label>			popisok k nejakemu input element.
+				- ak neobaluje element, ale je niekde inde, prepojime ho cez "for"
+				- !! uzitocne je obalit element do label. Vtedy klik na label funguje ako klik na vnutorny element, napr. checkbox
+
+
+======
+CSS
+======
+background		skrateny zapis:		background: #fff url('../img/logo.jpg') 50% 0 no-repeat 		Pozostava z:
+				- background-color: #fff;
+				- background-image: url('../img/logo.jpg');
+				- background-position: 50% 0;
+				- background-repeat: no-repeat;
+				
+padding			vnutorne oramovanie (napr. pre body)
+margin			vonkajsie oramovanie okolo elementu, napr. okolo nadpisu. !! AUTO - moze pomoct.
+-webkit			predpona pred nastavenie pre webkit browsre (safari, chrome). Ak je taky browser, zobere dany atribut. Napr. "-webkit-font-smoothing: antialiased"
+outline			zobrazi hranice elementu. Napr. pre vsetky objekty * {outline: 3px solid black;}
+owerflow		sposob vyplnenia elementu. Napr. 'scroll' = text nepreteka, ale vznikne scroll bar. Alebo 'hidden' = odsekne sa prebytocny text.
+display			sposob zobrazenia. 'none'=da prec, 'block'=vytvori sa na cely novy riadok a zabera celu sirku rodica. 'inline-block'=hybrid.
+text-indent		odsadenie zaciatku textu. v px
+font-variant	napr 'small caps' (kapitalky vo vyske malych pismen)
+text-decoration	napr. underline, none, overline, line-through, 
+letter-spacing	pismena od seba, v px
+word-spacing	slova od seba, v px
+text-shadow		uvadza sa: [posun zlava, posun zvrchu, rozmazanie, farba] napr 1px, 2px, 0px, #000. Da sa ciarkou pokracovat a dat druhu vrstvu tiena
+text-align		zarovnanie, left, right, center, justify 
+float			left, right. Obtekanie textu okolo elementu, napr. okolo <aside>. Elementy sa snazia ist co najviac hore! Az potom sa tlacia vlavo/vpravo
+				! co najmenej floatov ! Je lepsie obalit viacere floating elementy jednym, ktoremu nastavime float, a dame mu clearfix (!)
+list-style		none = zrusi odrazky v zozname.
+width			sirka elementu. Napr.natvrdo 300px. ALE, mozeme nastavit "max-width", cize automaticky, ale nie viac ako 300.
+content			da sa pridat znak/text do html. Napr.pridanie pomlcky pred element, napr.pred slovo= .trieda:before {content:'-'}
+position		relative  (nema vplyv na zvysny tok dokumentu)
+				absolute (ked odsunieme prec, ostatne elementy sa posunu). CENTROVANIE - nemozme pouzit margin, lebo je vytrhnuty z kontextu.
+				Ked ma nieco poziciu absolute, ale niektory z rodicov ma relative, tak sa posuva len v ramci toho rodica. ak taky rodic neni, nastavi sa voci stranke
+				statis (defaultna)
+				fixed - ostane na presnom mieste stranky, nescroluje s textom. 
+z-index			poradie, ak sa prekryvaju. Hodnoty 1,2,3... Najvyssia je vpredu. !!!Pozor - bere sa do uvahy,len ak ma element nastaveny position! 
+opacity			nepriesvitnost. Napr 0.8 je 80% nepriesvitny. 0=uplne priesvitny.
+
+
+=======
+CSS 3
+=======
+css3please.com		interaktivny tool na testovanie CSS3 ficu
+
+CSS sprites			v 1 obrazku moze byt vela ikoniek. Zobrazi sa vzdy len cast obrazka. Pomocou height alebo width si vieme posuvat, ktora cast sa ma zobrazit.
+					! treba si obrazok vyrobit s dostatocnymi odstupmi od ikoniek, aby pri zobrazovani jednej nevytrcala aj ina.
+
+
+CSS reset		na zaciatku nastavi defaultne hodnoty (nulove odsadenia atd)
+CSS normalize	nastavi nie nulove, ale take rozumne hodnoty. Je to standard - pouzivat. Vid subor normalize.css. Zavolat ho najprv, potom nalinkovat vlastne css
+
+
+------------
+FORMULARE
+----------
+vytvori sa pomocou <form> , a do neho sa davaju inputy. Viac o ich atributoch hore medzi tagmi.. Tiez mozno pouzit <textarea>
+Odosiela sa napr. tlacitkom - tag <input type="submit"> , alebo element <button>
+
+! je uzitocne na zaciatku vzdy vynulovat bordery a background
+	background: #fff;
+	border: none;
+
+radio button - atribut "name" tvori grupu. Vsetky s jendym name su skupina.
+
+- checkbox aj radio sa da oznacit atributom "checked", ALE select ma slovo "selected"
+
+
+				
+
+----------------------
+CSS SELEKTORY, KASKADY
+
+type selektor	a {}
+class selektor	.trieda {}
+ID selektor		#idecko {}
+priorita selektorov: ID > class > type
+!! este existuje style selektor - priamo pisany v HTML style="" .. tento ma najvyssiu prioritu, ale nema sa pouzivat.
+
+[]							vybere vsetky elementy, ktore maju daco. Napr. [title] su vsetky elementy, ktore maju title. Napr. [id] su vsetky, ktore maju IDcko.
+
+.trieda p:first-child 		prvy potomok odstavec v ramci sekcie trieda 
+.trieda p:last-child 		posledny odstavec v ramci sekcie trieda 
+.trieda li:before			/alebo after/ vieme tym vlozit custom text pred/za text elementu.
+.trieda > p 				plati len pre priameho potomka pod triedou (teda len <p> odsadeny 1x od urovne, kde je pouzita trieda)
+.trieda p a					plati pre odkaz, v ramci odstavca, kt. ma ten styl.			
+p.mojatrieda				<p> elementy, ktore maju triedu mojatrieda. (obdobne funguju ID selektory)
+p .mojatrieda				descendant selektor. Iba .mojatrieda elementy, ktore spadaju POD <p>   
+
+::selection					sposob zobrazenia vyberu mysou. Napr.background farbu zmenit.
+::moz-selection				to iste co hore, ale pre Mozzila
+
+a:hover						stav
+a:focus						stav
+
+
+-------------------------
+TOK DOKUMENTU, POZICIA ELEMENTOV
+
+floatovat sa da vlavo, vpravo, ale neda sa do stredu. Riesi sa to cez margin = auto.
+
+Obalit floatovacie elementy sa neda rovnako ako klasicke kontextove. 
+
+overflow		nastavenie pretrcania elementu z predosleho, ci obalovacieho elementu. hidden/auto
+clear			vypnutie floatovania. left/right/both
+
+
+FINTA - clearfix !! Vzdy ked mame floating elementy, ktore ideme obalovat, pomoze tento fix. Bez neho nam obalovaci element skolabuje, zmensi sa na vysku 0.
+Pridame tomu napr. class .group . Bez toho fixu by sa dalsie elementy tlacili co najvyssie a rozbili by floatovane elementy
+
+/* clearfix*/
+.group:before,
+.group:after {
+	content: " ";
+	display: table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+	*zoom: 1;
+}
+
+
+
+
+
+
+
+=====================
+ine
+=====================
+
+obrazok 	- da sa pridat cez HTML, ale aj cez CSS (background)
+
+=====================
+uzitocne stranky
+=====================
+
+www.html-ipsum.com			priklady html blokov
+www.cupcakeipsum.com		priklady
+www.tinypng.com				zmensi PNG so zachovanim kvality
+www.cssfontstack.com		font families
+https://fonts.google.com	fonty. Vie generovat link, ktory sa da do headeru stranky a prida externe fonty..
+chad.is/beautiful-web-type/	ukazky dobrych fontov
+developer.mozilla.org/en-US/
+css3factory.com				css gradient generator
+caniuse.com					zoznam podporovanych elementov pre rozne browsery
+css3please.com				interaktivny tool na testovanie CSS3 ficur
+html5please.com				interaktivny tool na testovanie HTML5 ficur
+wufoo.com					formulare - daju sa vyklikat a vlozit na stranku
+
+
+
+
+FARBY
+http://www.0to255.com					variacie jednej farby
+color.adobe.com/create/color-wheel/		pasujuce farby
+https://color.hailpixel.com				vyber farieb pohybom mysi
