@@ -1,1 +1,25 @@
-s 
+
+1. vytvorit repo na github.com
+
+2. nainstalovat Git klienta do PC
+
+3. importovat repo do PC. Lokalne pouzivat radsej konzolu, ako GUI. (cmd alebo MINGW32)
+	git clone https://github.com/filip-pe/stranky.git
+	
+4. status - nove, zmenene, zmazane subory
+	git status
+	
+5. Pridat subor do Git
+	git add nazov_suboru
+	git add -A		(vsetko)
+	
+6. Pridat do lokalneho repozitara
+	git commit -m "komentar"
+	
+7. Odoslat lokalny repozitar na GitHub
+	git push
+
+8. Stiahnut z GitHub na lokalny PC
+	git pull
+	
+
